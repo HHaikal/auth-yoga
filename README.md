@@ -8,3 +8,7 @@ Lib:
 - mysql2
 - dotenv
 - apollo-server ( error handling )
+
+todo: 
+- Autorization
+- Role based access control
