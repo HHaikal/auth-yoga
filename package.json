@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^6.2.0",
+    "graphql-yoga": "^1.17.4",
+    "jsonwebtoken": "^8.5.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.43.0"
+  },
+  "name": "auth-graphql-yoga",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
