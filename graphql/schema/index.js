@@ -1,4 +1,6 @@
 const auth = require('./auth')
+const author = require('./author')
+const book = require('./book')
 
 const rootSchema = `
     type Query {
@@ -14,4 +16,4 @@ const rootSchema = `
     }
 `
 
-module.exports = [rootSchema, auth]
+module.exports = [rootSchema, auth, book, author]
