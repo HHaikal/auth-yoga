@@ -7,16 +7,16 @@ const BOOK_ADDED = 'BOOK_ADDED'
 module.exports = {
     Query: {
         books: async (_, args, { models }) => {
-            const books = await models.book.all().catch(() => {
+            const books = await models.book.findAll().catch(() => {
                 throw new ForbiddenError('Cant find any book')
             })
 
             return books
         },
-        book: async (_, { id, name }, { models }) => {
+        book: async (_, { id }, { models }) => {
             const book = await models.book.findOne({
                 where: {
-                    [Op.or]: [{ id: id }, { name: name }]
+                    id: id
                 }
             })
                 .catch((err) => {

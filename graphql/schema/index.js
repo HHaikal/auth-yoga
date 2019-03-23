@@ -1,10 +1,12 @@
 const auth = require('./auth')
 const author = require('./author')
 const book = require('./book')
+const user = require('./user')
+const error = require('./error')
 
 const rootSchema = `
     type Query {
-        _: Boolean
+        _: Boolean        
     }
 
     type Mutation {
@@ -16,4 +18,4 @@ const rootSchema = `
     }
 `
 
-module.exports = [rootSchema, auth, book, author]
+module.exports = [rootSchema, auth, book, author, user, error]

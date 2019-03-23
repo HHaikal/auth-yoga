@@ -1,17 +1,20 @@
-
 const { GraphQLServer } = require('graphql-yoga')
 const rootSchema = require('./graphql/schema')
 const rootResolver = require('./graphql/resolver')
-
+const permission = require('./graphql/permission')
 const models = require('./models')
+require('dotenv').config()
 
 const server = new GraphQLServer({
     typeDefs: rootSchema,
     resolvers: rootResolver,
-    context: {
-        models: models,
+    middlewares: [permission],
+    context: async req => {
+        return {
+            models: models,
+            ...req,
+        }
     }
 })
-require('dotenv').config()
-server.start(4000, () => console.log('server start at port 4000'))
 
+server.start(4000, () => console.log('server start at port 4000'))

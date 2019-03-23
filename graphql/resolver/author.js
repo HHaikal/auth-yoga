@@ -7,7 +7,7 @@ const AUTHOR_ADDED = 'AUTHOR_ADDED'
 module.exports = {
     Query: {
         authors: async (_, args, { models }) => {
-            const authors = await models.author.all().catch(() => {
+            const authors = await models.author.findAll().catch(() => {
                 throw new ForbiddenError('Cant find any author')
             })
 

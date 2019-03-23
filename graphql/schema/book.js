@@ -1,7 +1,7 @@
 module.exports = `
     extend type Query {
         books: [Book!]!
-        book(id: ID, name: String): Book!
+        book(id: ID!): Book!
     }
 
     extend type Mutation {
