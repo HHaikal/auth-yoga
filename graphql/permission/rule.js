@@ -18,22 +18,10 @@ const isAuthenticated = rule()(async (_, args, { request }, info) => {
 
         return true
     } else {
-        throw new AuthenticationError('Bearer Type')
+        throw new AuthenticationError('Token Invalid')
     }
 })
 
-const ruleWithCustomError = rule()(async (parent, args, ctx, info) => {
-    return new Error('Custom error from rule.')
-})
-
-const ruleWithCustomErrorMessage = rule()(async (parent, args, ctx, info) => {
-    return new Error('Custom error from rule.')
-})
-
-
-
 module.exports = {
-    isAuthenticated,
-    ruleWithCustomError,
-    ruleWithCustomErrorMessage
+    isAuthenticated
 }
