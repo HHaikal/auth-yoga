@@ -147,6 +147,10 @@
     "@types/events" "*"
     "@types/node" "*"
 
+"@types/yup@0.26.23":
+  version "0.26.23"
+  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.26.23.tgz#00721a3b675e7609e5bcccb94234e86b754bcd04"
+
 "@types/zen-observable@^0.5.3":
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.5.4.tgz#b863a4191e525206819e008097ebf0fb2e3a1cdc"
@@ -754,11 +758,12 @@ graphql-resolvers@^0.3.2:
     deep-equal "^1.0.1"
     object-path "^0.11.4"
 
-graphql-shield@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-5.3.1.tgz#34cff4d1bfdcc3caa6fc348afb11503dde1893cd"
+graphql-shield@^6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-6.0.6.tgz#ef8c53f1dd972c2d1828ffd45ce9b1f877576534"
   dependencies:
-    lightercollective "^0.2.0"
+    "@types/yup" "0.26.23"
+    lightercollective "^0.3.0"
     object-hash "^1.3.1"
     yup "^0.27.0"
 
@@ -964,9 +969,9 @@ jws@^3.2.1:
     jwa "^1.2.0"
     safe-buffer "^5.0.1"
 
-lightercollective@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/lightercollective/-/lightercollective-0.2.0.tgz#4f10cd53ec50405d7da03ee81233067993ca8e67"
+lightercollective@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/lightercollective/-/lightercollective-0.3.0.tgz#1f07638642ec645d70bdb69ab2777676f35a28f0"
 
 lodash.includes@^4.3.0:
   version "4.3.0"
